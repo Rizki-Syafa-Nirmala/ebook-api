@@ -20,3 +20,27 @@ Route::get('/', function () {
 Route::get('coba', function(){
     return 'Halo';
 });
+
+//array JSON
+Route::get('coba1', function(){
+    return ['rafa', 'rafi','rafo'];
+});
+
+//array JSON
+Route::get('coba2', function(){
+    return [
+        'Nama' => 'Rizki Syafa Nirmala',
+        'NIS' => 3103120199,
+        'Kelas' => 'XII RPL 6'
+    ];
+});
+
+Route::get('coba3', function(){
+    return response()->json(
+        [
+            'Nama' => 'Rizki Syafa Nirmala',
+            'NIS' => 3103120199,
+            'Kelas' => 'XII RPL 6'
+        ], 201
+    );
+});
